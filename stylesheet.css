@@ -1,23 +1,37 @@
-H1 {
+body {
+  background: #81bb50;
+  font-family: "Tahoma", Helvetica, sans-serif;
+  }
+
+h1 {
+  font-size: 26px;
   color: #007511;
+  font-variant: small-caps;
+  text-shadow: 1px 1px 3px #050505
 }
 
-H2 {
+h2 {
+  font-size: 26px;
   color: #007511;
+  font-variant: small-caps;
+  text-shadow: 1px 1px 3px #050505
 }
 
-H3 {
+h3 {
+  font-size: 20px;
   color:#505050;
+  font-variant: small-caps;
 }
-P {
+p {
   color: white;
-  margin-left: 20px;
-  margin-right: 20px; 
-  margin-top: 30px
+  font-size: 14px;
+  margin-left: 14px;
+  margin-right: 14px; 
+  margin-top: 14px
   
 }
-BODY {
-  background: #81bb50
-  
-  
+
+a {
+  color: #e0d000;  
 }
+

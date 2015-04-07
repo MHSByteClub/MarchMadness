@@ -2,8 +2,89 @@
   <html>
     <head>
       <title>Login - MHS March Madness</title>
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/login.css"/>
     </head>
     
     <body>
+      <div class="page">
+          <div class="heading">
+              <h2>March Madness(Rock, Paper, Scissors)</h2>
+          </div>
+          <div class="matchtable">
+              <table>
+                  <div class="tablehead">
+                      <thead>
+                          <tr>
+                              <th></th>
+                              <th>Current Match</th>
+                          </tr>
+                      </thead>
+                  </div>
+                  <tbody>
+                      <tr>
+                          <td><img src="http://images.clipartpanda.com/purple-cross-clipart-Arrow-clip-art-15.png" height="10"></td>
+                          <td>Your Move:</td>
+                          <div class="playerchoice">
+                              <td></td>
+                          </div>
+                      </tr>
+                      <tr>
+                          <td><img src="http://images.clipartpanda.com/purple-cross-clipart-Arrow-clip-art-15.png" height="10"></td>
+                          <td>Their Move:</td>
+                          <div class="stillplay">
+                              <td></td>
+                          </div>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="inputstuff" id="input">
+              <div class="user">
+                 <label>Username: </label><input type="textbox" id="username"/>
+              </div>
+              <div class="inputbox">
+                  <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
+                      <label>ID:</label> <input type="textbox" id="id_num"/>
+                      <br>
+                      <button type="button" id="challenge_friend" onclick="challenge()">
+                          Challenge A Friend
+                      </button>
+                  </form>
+              <p>
+                  <button type="button" id="random_match" onclick="random()">Random Match</button>
+              </p>
+              <p>
+                  <button type="button" id="see_results" onclick="see_ids()">See Results</button>
+                  <p id="results_input"></p>
+              </p>
+              </div>
+          </div>
+      </div>
+      <script>
+          var id, chal_id;
+          var username;
+          var chal_entries = [];
+          function challenge(){
+              id = document.getElementById('id_num').value;
+              username = document.getElementById('username').value;
+          }
+          
+          function random(){
+              chal_id = chal_entries[Math.floor(random(0, chal_entries.length + 1))];
+              username = document.getElementById('username').value;
+          }
+          
+          function see_ids(){
+              var results;
+              if(id != null && chal_id != null){
+                  results = $("#results_input");
+                  results.innerHTML("You were paired against: "+chal_id);
+              }else{
+                  results.innerHTML("You didn't get a match, try again later");
+              }
+          }
+      </script>
+      <script type="text/javascript" src="js/site.js"></script>
     </body>
   </html>

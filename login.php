@@ -1,5 +1,6 @@
 <?php 
-    //this won't work with out a server since, php is server-side
+    //this won't work without a server since, php is server-side
+    //However it does work on my apache dev site 
     $username = "";
     $id = "";
     $err = "";

@@ -59,30 +59,6 @@
             </div>
           </div>
       </div>
-      <script>
-          var id, chal_id;
-          var username;
-          var chal_entries = [];
-          function challenge(){
-              id = document.getElementById('id_num').value;
-              username = document.getElementById('username').value;
-          }
-          
-          function random(){
-              chal_id = chal_entries[Math.floor(random(0, chal_entries.length + 1))];
-              username = document.getElementById('username').value;
-          }
-          
-          function see_ids(){
-              var results;
-              if(id != null && chal_id != null){
-                  results = $("#results_input");
-                  results.innerHTML("You were paired against: "+chal_id);
-              }else{
-                  results.innerHTML("You didn't get a match, try again later");
-              }
-          }
-      </script>
       <script type="text/javascript" src="js/site.js"></script>
     </body>
   </html>

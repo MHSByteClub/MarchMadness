@@ -27,8 +27,6 @@
                   </div>
                   <tbody>
                       <tr>
-                          <!--might be copyrighted --->
-                          <!--Rygar got these images --->
                           <td><img src="http://images.clipartpanda.com/purple-cross-clipart-Arrow-clip-art-15.png" height="10"></td>
                           <td>Your Move:</td>
                           <div class="playerchoice">
@@ -36,8 +34,6 @@
                           </div>
                       </tr>
                       <tr>
-                          <!--might be copyrighted --->
-                          <!--Rygar got these images --->
                           <td><img src="http://images.clipartpanda.com/purple-cross-clipart-Arrow-clip-art-15.png" height="10"></td>
                           <td>Their Move:</td>
                           <div class="stillplay">
@@ -48,30 +44,31 @@
               </table>
           </div>
           <div class="inputstuff" id="input">
-              <div class="user">
-                 <label>Username: </label><input type="textbox" id="username"/>
-              </div>
-              <div class="inputbox">
-                  <form action="http://www.html.am/html-codes/textboxes/submitted.cfm">
-                      <label>ID:</label> <input type="textbox" id="id_num"/>
-                      <br>
-                      <button type="button" id="challenge_friend" onclick="challenge()">
-                          Challenge A Friend
-                      </button>
-                  </form>
-              <p>
-                  <button type="button" id="random_match" onclick="random()">Random Match</button>
-              </p>
-              <p>
-                  <button type="button" id="see_results" onclick="see_ids()">See Results</button>
-                  <p id="results_input"></p>
-              </p>
-              </div>
+             <div class="inputbox">
+                <form id="login" action="login.php" method="post">
+                    <fieldset>
+                        <div class="user">
+                            <label>Username: </label><input type="textbox" id="username"/>
+                            <br>
+                        </div>
+                        <label>ID:</label> <input type="textbox" id="id_num"/>
+                        <br>
+                        <button type="button" id="challenge_friend" onclick="challenge()">
+                            Challenge A Friend
+                        </button>
+                        <p>
+                            <button type="button" id="random_match" onclick="random()">Random Match</button>
+                        </p>
+                        <p>
+                            <button type="button" id="see_results" onclick="see_ids()">See Results</button>
+                            <p id="results_input"></p>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
           </div>
       </div>
       <script>
-          //Attempted a script to login the user(does not work)
-          //Will fix with a SQL database
           var id, chal_id;
           var username;
           var chal_entries = [];

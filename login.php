@@ -1,4 +1,5 @@
 <?php 
+    //this won't work with out a server since, php is server-side
     $username = "";
     $id = "";
     $err = "";

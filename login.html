@@ -44,25 +44,16 @@
               </table>
           </div>
           <div class="inputstuff" id="input">
-             <div class="inputbox">
-                <form id="login" action="login.php" method="post">
+            <div class="inputbox">
+                <form action="login.php" method="post">
                     <fieldset>
                         <div class="user">
-                            <label>Username: </label><input type="textbox" id="username" name="username"/>
+                            <label for="username">Username: </label><input type="textbox" id="username" name="username"/>
                             <br>
                         </div>
-                        <label>ID:</label> <input type="textbox" id="id_num" name="id"/>
+                        <label for="id_num">ID:</label><input type="textbox" id="id_num" name="id"/>
                         <br>
-                        <button type="button" id="challenge_friend" onclick="challenge()">
-                            Challenge A Friend
-                        </button>
-                        <p>
-                            <button type="button" id="random_match" onclick="random()">Random Match</button>
-                        </p>
-                        <p>
-                            <button type="button" id="see_results" onclick="see_ids()">See Results</button>
-                            <p id="results_input"></p>
-                        </p>
+                        <input type="submit"/>
                     </fieldset>
                 </form>
             </div>

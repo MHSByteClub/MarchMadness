@@ -4,6 +4,10 @@
     $username = "";
     $id = "";
     $err = "";
+    //the id (not the school one) for position in the sql database table
+    //(id_num)id: 0 | (id) school_id = 100100 | (username) username = "myusername" 
+    static $id_num = 0;
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(empty($_POST["username"])){
             $err = "No name present";

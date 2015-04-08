@@ -1,5 +1,5 @@
 <?php 
   echo "Login Successful";
-  $username = $_GET['username'];
-  $id = $_GET['id'];
+  $username = $_POST['username'];
+  $id = $_POSt['id'];
 ?>

@@ -6,6 +6,7 @@
     $err = "";
     //the id (not the school one) for position in the sql database table
     //(id_num)id: 0 | (id) school_id = 100100 | (username) username = "myusername" 
+    //made id_num static so it will keep track of all logins
     static $id_num = 0;
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

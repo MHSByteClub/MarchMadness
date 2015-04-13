@@ -32,4 +32,5 @@
          $input = htmlspecialchars($input);
          return $input;
     }
+    $id_num++;
 ?>
